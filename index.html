@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Shop</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="css/cake.css">
+
+    <link rel="stylesheet" href="css/cart.css">
+
+    <link rel="stylesheet" media="screen and (max-width : 1380px)" href="css/responsive.css">
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const signUp = document.getElementById("signup");
+            1
+            signUp.addEventListener("click", () => {
+                alert("Account Created Successfully!");
+            });
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const signIn = document.getElementById("signin");
+            1
+            signIn.addEventListener("click", () => {
+                alert("Login Successfully!");
+            });
+        });
+  
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container1">
+        <div class="navbar navbar-expand fixed-top">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.jpg" alt="logo" style="width: 100px;height:100px">
+            </a>
+
+            <div class="home">
+                <a class="nav-link" href="#home" id="home-link">Home</a>
+            </div>
+
+            <div class="services">
+                <a class="nav-link" href="#service" id="service-link">Services</a>
+            </div>
+
+            <div class="client">
+                <a class="nav-link" href="#client-section" id="client-link">Client</a>
+            </div>
+
+            <div class="contactus">
+                <a class="nav-link" href="#contact" id="contact-link">Contact Us</a>
+            </div>
+
+            <div class="header-btn">
+                <a href="#signup" class="sign-up" data-toggle="modal" data-target="#myModal">Sign Up</a>
+                <a href="#signin" class="sign-in" data-toggle="modal" data-target="#modalLoginForm">Sign In</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container2" id="home">
+        <h1><span class="h1-primary">Welcome To My Cake Shop</span></h1>
+        <p><span class="h1-primary">Bright and welcome to this cake shop is always full of friendly faces.</span></p>
+        <p id="para"><span class="h1-primary">A special cake for a special day.</span> </p><br>
+        <button type="button" class="btn" id="btn" data-toggle="modal" data-target="#cartModal">Order Now</button>
+
+
+        <div class="modal" id="cartModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Model Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title"> Cart </h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Model Body -->
+                    <div class="modal-body">
+                        <section id="cart">
+
+                            <div class="products">
+                                <h2>Available Products</h2>
+                                <ul id="product-list">
+
+                                    <li data-id="1" data-name="Pastry" data-price="30.00"
+                                        class="justify-content-around">
+                                        <img src="img/pastry.jpg" style="width: 50px; height: 60px;" alt=""> Pastry <br>
+                                        Rs. 30.00
+                                        <button class="add-to-cart mybtn2">Add to Cart</button>
+                                    </li>
+
+                                    <li data-id="2" data-name="black forest" data-price="300.00"
+                                        class="justify-content-around">
+                                        <img src="img/black forest.webp" style="width: 50px; height: 60px;" alt="">
+                                        Black Forest <br> Rs. 300.00
+                                        <button class="add-to-cart mybtn2">Add to Cart</button>
+                                    </li>
+
+                                    <li data-id="3" data-name="caramel" data-price="400.00"
+                                        class="justify-content-around">
+                                        <img src="img/caramel.webp" style="width: 50px; height: 50px;" alt=""> caramel
+                                        <br> Rs. 400.00
+                                        <button class="add-to-cart mybtn2">Add to Cart</button>
+                                    </li>
+
+                                    <li data-id="4" data-name="chocolava" data-price="500.00"
+                                        class="justify-content-around">
+                                        <img src="img/chocolava.jpg" style="width: 50px; height: 60px;" alt="">
+                                        Chocolava <br> Rs. 500.00
+                                        <button class="add-to-cart mybtn2">Add to Cart</button>
+                                    </li>
+
+                                    <li data-id="5" data-name="red velvet" data-price="250.00"
+                                        class="justify-content-around">
+                                        <img src="img/red velvet.jpg" style="width: 50px; height: 60px;" alt=""> Red
+                                        Velvet <br> Rs. 250.00
+                                        <button class="add-to-cart mybtn2">Add to Cart</button>
+                                    </li>
+
+                                    <div class="cart">
+                                        <h2><span class="yourCart">Your Cart</span></h2>
+                                        <ul id="cart-items"></ul>
+                                        <p><span class="par">Total: Rs.</span><span id="cart-total" class="par">0</span>
+                                        </p>
+                                        <button id="checkout-btn" class="mybtn2">Checkout</button>
+                                    </div>
+
+                                    <!-- Add more products here -->
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- Modal Footer  -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container3">
+        <section class="services-container" id="service">
+            <h1 class="h-primary center">Our Services</h1>
+            <div id="services">
+                <div class="box">
+                    <img src="img/cake.jpg" alt="">
+                    <h2 class="h-secondary center">Cake </h2>
+                    <p class="center">Cake is not just a dessert, it's a symbol of celebration, happiness, and
+                        indulgence</p>
+                </div>
+                <div class="box">
+                    <img src="img/pastry.jpg" alt="">
+                    <h2 class="h-secondary center">Cake pastry </h2>
+                    <p class="center">Pastry is baked food made with a dough of flour, water, and shortening (solid
+                        fats, including butter or lard) that may be savoury or sweetened.</p>
+                </div>
+                <div class="box">
+                    <img src="img/photo cake.jpg" alt="">
+                    <h2 class="h-secondary center">Photo Cake </h2>
+                    <p class="center">Photo cakes allow you to personalise your cake with an image that is relevant and
+                        meaningful to you.</p>
+                </div>
+                <div class="box">
+                    <img src="img/cake items.jpg" alt="">
+                    <h2 class="h-secondary center">Items </h2>
+                    <p class="center"> To make your birthday wonderful. </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="container4">
+        <section id="client-section">
+            <h1 class="h-primary center">Our Clients</h1>
+            <div id="clients">
+                <div class="client-item">
+                    <img src="img/client 1.png" alt="Our client">
+                </div>
+                <div class="client-item">
+                    <img src="img/client 2.jpg" alt="Our client">
+                </div>
+                <div class="client-item">
+                    <img src="img/client 3.jpg" alt="Our client">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="container5">
+        <section id="contact">
+            <h1 class="h-primary center" style="color: black;">Contact Us</h1><br>
+            <div id="contact-box">
+                <form action="">
+                    <div class="form-group">
+                        <label for="name">Name :</label>
+                        <input type="text" name="name" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="Email">Email :</label>
+                        <input type="text" name="Email" id="Email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="Phone No.">Phone no :</label>
+                        <input type="text" name="Phone No." id="Phone No." placeholder="Enter your phone number ">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description :</label>
+                        <textarea name="description" id="description" cols="30" rows="10"
+                            placeholder="Description..."></textarea>
+                    </div>
+                    <br>
+                    <input class="btn2" type="submit" name="Submit">
+                    <input class="btn2" type="reset" name="Reset">
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <div class="container6">
+        <footer class="foot">
+            <div class="center">
+                Copyright &copy; www.MyCakeShop.com. All rights reserved!
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- Modal -->
+
+    <!-- Sign-Up modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold"> Sign Up</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-5">
+                        <i class="fas fa-envelope prefix grey-text"></i>
+                        <input type="email" id="defaultForm-email" class="form-control validate">
+                        <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
+                    </div>
+
+                    <div class="md-form mb-4">
+                        <i class="fas fa-lock prefix grey-text"></i>
+                        <input type="password" id="defaultForm-pass" class="form-control validate">
+                        <label data-error="wrong" data-success="right" for="defaultForm-email">Your password</label>
+                    </div>
+
+                    <div class="md-form mb-4">
+                        <i class="fas fa-lock prefix grey-text"></i>
+                        <input type="password" id="defaultForm-pass" class="form-control validate">
+                        <label data-error="wrong" data-success="right" for="defaultForm-email">Confirm password</label>
+                    </div>
+                </div>
+
+                <div class="modal-footer d-flex justify-content-center">
+                    <a href="index.html" class="signup"><button class="btn btn-success" id="signup">Sign Up</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign-In modal -->
+    <div class="container">
+        <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 font-weight-bold"> Sign In</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body mx-3">
+                        <div class="md-form mb-5">
+                            <i class="fas fa-envelope prefix grey-text"></i>
+                            <input type="email" id="defaultForm-email" class="form-control validate">
+                            <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
+                        </div>
+
+                        <div class="md-form mb-4">
+                            <i class="fas fa-lock prefix grey-text"></i>
+                            <input type="password" id="defaultForm-pass" class="form-control validate">
+                            <label data-error="wrong" data-success="right" for="defaultForm-email">Your password</label>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer d-flex justify-content-center">
+                        <a href="index.html" class="signin"><button class="btn btn-success" id="signin">Sign In</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/cart.js"></script>
+
+
+</body>
+
+</html>
